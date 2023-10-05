@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    background: #111317;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-container {
+    position: relative;
+    margin: 24px;
+    width: 320px;
+    height: 570px;
+    overflow: hidden;
+    background-color: #35373b;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.img-container,
+.body-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.body-container {
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #d79447;
+    opacity: 0;
+    transition: height linear 0.4s, opacity linear 0.2s;
+}
+
+.item-container:hover .overlay {
+    opacity: 1;
+    height: 150px;
+}
+
+.event-info {
+    background-color: #35373b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.title {
+    color: #f9ac54;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 12px;
+}
+
+.info {
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.separator {
+    width: 20%;
+    height: 6px;
+    background-color: #f9ac54;
+    margin-bottom: 16px;
+}
+
+.additional-info {
+    border-top: 1px solid #bbb;
+    margin-top: 12px;
+    padding: 28px;
+    padding-bottom: 0;
+}
+
+.additional-info .info {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info i {
+    color: #d79447;
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+.info span {
+    color: #d79447;
+    font-weight: bolder;
+}
+
+.action {
+    color: #fff;
+    border: 3px solid #fff;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    outline: none;
+    cursor: pointer;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.4s, top 0.4s;
+}
+
+.item-container:hover .action {
+    top: 50px;
+}
+
+.action:hover {
+    background-color: #ffffff;
+}
+
+/* Default styles for larger screens (e.g., Desktop) */
+body {
+    font-size: 16px;
+}
+
+.item-container {
+    width: 320px;
+    height: 570px;
+}
+
+/* Responsive CSS for Tablet (landscape) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    body {
+        font-size: 14px;
+    }
+
+    .item-container {
+        width: 48%; /* Adjust as needed */
+        margin: 1%; /* Adjust as needed to create gaps between items */
+    }
+}
+
+/* Responsive CSS for Tablet (portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        font-size: 14px;
+    }
+
+    .item-container {
+        width: 100%; /* Take full width on portrait tablets */
+        margin: 16px 0; /* Adjust margin for spacing */
+    }
+
+    .item-container img {
+        height: auto; /* Allow the image to resize based on width */
+    }
+}
+
+/* Responsive CSS for Smartphone (portrait) */
+@media (max-width: 480px) and (orientation: portrait) {
+    body {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .item-container {
+        width: 100%; /* Take full width on portrait smartphones */
+        margin: 16px 0; /* Adjust margin for spacing */
+    }
+
+    .item-container img {
+        height: auto; /* Allow the image to resize based on width */
+    }
+
+    .overlay {
+        height: 100px; /* Reduce overlay height */
+    }
+}
+
+/* Responsive CSS for Smartphone (landscape) */
+@media (max-width: 480px) and (orientation: landscape) {
+    body {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .item-container {
+        width: 48%; /* Adjust as needed */
+        margin: 1%; /* Adjust as needed to create gaps between items */
+    }
+}
+
+/* Additional responsive adjustments can be made as needed */

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(Images/contact.jpg);
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #d79447;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: row;
+}
+
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #d79447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #f9ac54;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+
+{
+    width: 100px;
+    background: #d79447;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Responsive CSS for Tablet (landscape) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .contact {
+        padding: 30px;
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .container .contactInfo {
+        width: 100%; 
+    }
+
+    .contactForm {
+        width: 100%; 
+    }
+}
+
+/* Responsive CSS for Tablet (portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
+    .contact {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .container .contactInfo {
+        width: 100%; 
+    }
+
+    .contactForm {
+        width: 100%; 
+    }
+
+    
+}
+
+/* Responsive CSS for Smartphone (portrait) */
+@media (max-width: 480px) and (orientation: portrait) {
+    .contact {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .container .contactInfo,
+    .contactForm {
+        width: 100%; 
+    }
+
+
+}
+
+/* Responsive CSS for Smartphone (landscape) */
+@media (max-width: 480px) and (orientation: landscape) {
+    .contact {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: row; 
+    }
+
+    .container .contactInfo {
+        width: 50%;
+    }
+
+    .contactForm {
+        width: 50%;
+    }
+
+}
